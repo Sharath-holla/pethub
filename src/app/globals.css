@@ -1,0 +1,56 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Moving Ticker Animation */
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #2D3436;
+  color: white;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Floating Blob Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-anim {
+  animation: float 6s ease-in-out infinite;
+}
